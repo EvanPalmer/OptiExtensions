@@ -1,7 +1,7 @@
 {
     "plugin_type": "widget",
-    "name": "Evan - Card",
-    "edit_page_url": "https://www.hkexpress.com/en-hk/",
+    "name": "Evan - General Card",
+    "edit_page_url": "https://www.abc.net.au/news",
     "form_schema": [
       {
         "default_value": "My Title",

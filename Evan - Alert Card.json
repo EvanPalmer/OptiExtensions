@@ -1,0 +1,49 @@
+{
+  "plugin_type": "widget",
+  "name": "Evan - Alert Card",
+  "edit_page_url": "https://www.abc.net.au/news",
+  "form_schema": [
+    {
+      "default_value": "Evans Example",
+      "name": "text",
+      "field_type": "text",
+      "options": null,
+      "label": "A text field"
+    },
+    {
+      "default_value": "Evans Description",
+      "name": "description",
+      "field_type": "text",
+      "options": null,
+      "label": "Description"
+    },
+    {
+      "default_value": "Button One",
+      "name": "buttonText1",
+      "field_type": "text",
+      "options": null,
+      "label": "Button Text 1"
+    },
+    {
+      "default_value": "Button Two",
+      "name": "buttonText2",
+      "field_type": "text",
+      "options": null,
+      "label": "Button Text 2"
+    },
+    {
+      "default_value": "",
+      "name": "element",
+      "field_type": "selector",
+      "options": null,
+      "label": "Element"
+    }
+  ],
+  "description": "",
+  "options": {
+    "html": "<div id=\"optimizely-extension-{{ extension.$instance }}\" class=\"evan---alert-card\">\n  <div class=\"alert-card bg-light inner-glow radius-md padding-md shadow-xs js-alert-card\">\n    <div>\n      <h1 class=\"alert-card__title\">\n        <svg class=\"cd-icon\" viewBox=\"0 0 30 30\" aria-hidden=\"true\">\n          <g>\n            <path d=\"M12.4 2.563L.377 24.518A3.023 3.023 0 0 0 3.006 29h23.987a3.023 3.023 0 0 0 2.632-4.477L17.66 2.569a2.992 2.992 0 0 0-5.26-.006z\" fill=\"#ffd138\" opacity=\".25\"></path>\n            <path fill=\"none\" stroke=\"#efb525\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 19v-9\"></path>\n            <circle cx=\"15\" cy=\"23.5\" r=\"1.5\" fill=\"#efb525\"></circle>\n          </g>\n        </svg>\n\n        <span>\n          {{ extension.text }}\n        </span>\n      </h1>\n\n      <p class=\"alert-card__content\">{{ extension.description }}</p>\n\n\n      <div class=\"alert-card__btns\">\n        <a class=\"cd-btn cd-btn--subtle\" href=\"#0\">{{ extension.buttonText1 }}</a>\n        <a class=\"cd-btn cd-btn--primary\" href=\"#0\">{{ extension.buttonText2 }}</a>\n      </div>\n    </div>\n\n    <button class=\"alert-card__close-btn js-alert-card__close-btn\">\n      <svg class=\"cd-icon\" viewBox=\"0 0 16 16\">\n        <title>Hide alert</title>\n        <g fill=\"none\" stroke=\"currentColor\" stroke-miterlimit=\"10\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n          <line x1=\"2\" y1=\"2\" x2=\"14\" y2=\"14\" />\n          <line x1=\"14\" y1=\"2\" x2=\"2\" y2=\"14\" />\n        </g>\n      </svg>\n    </button>\n  </div>\n</div>\n\n",
+    "css": "/* -------------------------------- \n\nFile#: _1_alert-card\nTitle: Alert Card\nDescr: Alert card for app UI\nUsage: codyhouse.co/license\n\n-------------------------------- */\n\n/* reset */\n*, *::after, *::before {\n  box-sizing: border-box;\n}\n\n* {\n  font: inherit;\n  margin: 0;\n  padding: 0;\n  border: 0;\n}\n\nhtml {\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\nbody {\n  background-color: hsl(0, 0%, 100%);\n  font-family: system-ui, sans-serif;\n  color: hsl(230, 7%, 23%);\n  font-size: 1.125rem; /* 18px */\n  line-height: 1.4;\n}\n\nh1, h2, h3, h4 {\n  line-height: 1.2;\n  color: hsl(230, 13%, 9%);\n  font-weight: 700;\n}\n\nh1 {\n  font-size: 2.5rem; /* 40px */\n}\n\nh2 {\n  font-size: 2.125rem; /* 34px */\n}\n\nh3 {\n  font-size: 1.75rem; /* 28px */\n}\n\nh4 {\n  font-size: 1.375rem; /* 22px */\n}\n\nol, ul, menu {\n  list-style: none;\n}\n\nbutton, input, textarea, select {\n  background-color: transparent;\n  border-radius: 0;\n  color: inherit;\n  line-height: inherit;\n  -webkit-appearance: none;\n          appearance: none;\n}\n\ntextarea {\n  resize: vertical;\n  overflow: auto;\n  vertical-align: top;\n}\n\na {\n  color: hsl(250, 84%, 54%);\n}\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n\nimg, video, svg {\n  display: block;\n  max-width: 100%;\n}\n\n/* -------------------------------- \n\nButtons \n\n-------------------------------- */\n\n.cd-btn {\n  position: relative;\n  display: inline-flex;\n  justify-content: center;\n  align-items: center;\n  white-space: nowrap;\n  text-decoration: none;\n  padding: 0.5rem 1rem;\n  border-radius: 0.375em;\n  font-size: 1em;\n  text-decoration: none;\n  line-height: 1.2;\n  cursor: pointer;\n  transition: 0.2s;\n  will-change: transform;\n}\n\n.cd-btn:focus-visible {\n  outline: none;\n}\n\n.cd-btn:active {\n  transform: translateY(2px);\n}\n\n.cd-btn--primary {\n  background: hsl(250, 84%, 54%);\n  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.15), \n              0 1px 3px hsla(250, 84%, 38%, 0.25), \n              0 2px 6px hsla(250, 84%, 38%, 0.1), \n              0 6px 10px -2px hsla(250, 84%, 38%, 0.25);\n  color: hsl(0, 0%, 100%);\n}\n\n.cd-btn--primary:hover {\n  background: hsl(250, 84%, 60%);\n  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.15), \n              0 1px 2px hsla(250, 84%, 38%, 0.25), \n              0 1px 4px hsla(250, 84%, 38%, 0.1), \n              0 3px 6px -2px hsla(250, 84%, 38%, 0.25);\n}\n\n.cd-btn--primary:focus-visible {\n  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.15), \n              0 1px 2px hsla(250, 84%, 38%, 0.25), \n              0 1px 4px hsla(250, 84%, 38%, 0.1), \n              0 3px 6px -2px hsla(250, 84%, 38%, 0.25), \n              0 0 0 2px hsl(0, 0%, 100%), \n              0 0 0 4px hsl(250, 84%, 54%);\n}\n\n.cd-btn--subtle {\n  background: hsl(0, 0%, 100%);\n  color: hsl(230, 13%, 9%);\n  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.1), \n              0 0 0 1px hsla(230, 13%, 9%, 0.02), \n              0 0.3px 0.4px hsla(230, 13%, 9%, 0.025),\n              0 1px 3px -1px hsla(230, 13%, 9%, 0.2), \n              0 3.5px 6px hsla(230, 13%, 9%, 0.12);\n}\n\n.cd-btn--subtle:hover {\n  background: hsl(0, 0%, 100%);\n  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.1), \n              0 0 0 1px hsla(230, 13%, 9%, 0.02), \n              0 0.1px 0.3px hsla(230, 13%, 9%, 0.06),\n              0 1px 2px hsla(230, 13%, 9%, 0.12),\n              0 1px 3px -1px hsla(230, 13%, 9%, 0.2);\n}\n\n.cd-btn--subtle:focus-visible {\n  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.1), \n              0 0 0 1px hsla(230, 13%, 9%, 0.02), \n              0 0.3px 0.4px hsla(230, 13%, 9%, 0.025),\n              0 1px 3px -1px hsla(230, 13%, 9%, 0.2), \n              0 3.5px 6px hsla(230, 13%, 9%, 0.12), \n              0 0 0 2px hsl(0, 0%, 100%), \n              0 0 0 4px hsl(230, 7%, 23%);\n}\n\n/* -------------------------------- \n\nIcons \n\n-------------------------------- */\n\n.cd-icon {\n  --size: 1em;\n  font-size: var(--size);\n  height: 1em;\n  width: 1em;\n  display: inline-block;\n  color: inherit;\n  fill: currentColor;\n  line-height: 1;\n  flex-shrink: 0;\n  max-width: initial;\n}\n\n.cd-icon use { /* SVG symbols - enable icon color corrections */\n  color: inherit;\n  fill: currentColor;\n}\n\n/* -------------------------------- \n\nComponent \n\n-------------------------------- */\n\n.alert-card {\n  position: relative;\n  z-index: 1;\n  background-color: hsl(0, 0%, 100%);\n  border-radius: 0.375em;\n  padding: 2rem;\n  box-shadow: 0 0 0 1px hsla(230, 13%, 9%, 0.02),\n              0 1px 3px -1px hsla(230, 13%, 9%, 0.2);\n}\n\n.alert-card__title {\n  font-size: 1.375rem;\n  display: flex;\n  flex-wrap: wrap;\n  gap: 0.5rem;\n  align-items: center;\n  padding-right: 2rem;\n}\n\n.alert-card__title .cd-icon {\n  --size: 30px;\n  color: hsl(35, 79%, 66%);\n}\n\n.alert-card__content {\n  color: hsl(225, 4%, 47%);\n  line-height: 1.58;\n  font-size: 0.9375rem;\n  margin: 0.75rem 0;\n}\n\n.alert-card__btns {\n  display: flex;\n  flex-direction: column;\n  flex-wrap: wrap;\n  gap: 0.75rem;\n}\n\n@media (min-width: 42.5rem) {\n  .alert-card__btns {\n    flex-direction: row;\n  }\n}\n\n.alert-card__close-btn {\n  height: 32px;\n  width: 32px;\n  position: absolute;\n  z-index: 1;\n  top: 1.5rem;\n  right: 1.5rem;\n  display: flex;\n  border-radius: 50%;\n  transition: 0.2s;\n}\n\n.alert-card__close-btn .cd-icon {\n  --size: 16px;\n  margin: auto;\n  display: block;\n}\n\n.alert-card__close-btn:hover {\n  background-color: hsla(230, 13%, 9%, 0.1);\n}\n\n/* -------------------------------- \n\nUtilities \n\n-------------------------------- */\n\n.cd-hide {\n  display: none;\n}",
+    "apply_js": "(function() {\n  const utils = window.optimizely.get('utils');\n  \n  utils.waitForElement(extension.element)\n  .then(function(elem) {\n    // Prepend the extension html to the body\n    elem.insertAdjacentHTML('afterbegin', extension.$html);\n  });\n\n  function initAlertCard(card) {\n    card.addEventListener('click', function(event) {\n      if(event.target.closest('.js-alert-card__close-btn')) card.classList.add('cd-hide');\n    });\n  };\n\n  var alertCards = document.getElementsByClassName('js-alert-card');\n  if(alertCards.length > 0) {\n    for(var i = 0; i < alertCards.length; i++) {\n      (function(i){initAlertCard(alertCards[i])})(i);\n    }\n  }\n}());",
+    "undo_js": "/*\n * Editor now supports ES6 compliant code. Note that adding ES6\n * specific code to an experiment will break for users running\n * ES5-only browsers as code entered is not transpiled down to ES5.\n */\n\n  const extensionElement = document.getElementById('optimizely-extension-' + extension.$instance);\n  if (extensionElement) {\n    extensionElement.parentElement.removeChild(extensionElement);\n  }\n\n"
+  }
+}
