@@ -1,17 +1,17 @@
 {
   "plugin_type": "widget",
-  "name": "Evan - Alert Card",
-  "edit_page_url": "https://www.abc.net.au/news",
+  "name": "Optimizely - Alert Card",
+  "edit_page_url": "https://www.optimizely.com/",
   "form_schema": [
     {
-      "default_value": "Evans Example",
+      "default_value": "Default Example",
       "name": "text",
       "field_type": "text",
       "options": null,
       "label": "A text field"
     },
     {
-      "default_value": "Evans Description",
+      "default_value": "Default Description",
       "name": "description",
       "field_type": "text",
       "options": null,
