@@ -1,7 +1,7 @@
 {
   "plugin_type": "widget",
-  "name": "Optimizely - Badge",
-  "edit_page_url": "https://www.optimizely.com/",
+  "name": "OPT - Badge",
+  "edit_page_url": "https://apj-association.optimizely.asia/",
   "form_schema": [
     {
       "default_value": "Badge Text",
